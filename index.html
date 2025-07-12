@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mon Journal Poétique</title>
+<style>
+body {
+margin: 0;
+background-color: #0d1b2a;
+font-family: 'Georgia', serif;
+}
+.book {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+perspective: 2000px;
+}
+.page {
+width: 300px;
+height: 450px;
+background: url('stars.png') center/cover no-repeat;
+color: #000;
+font-size: 16px;
+padding: 20px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+transform-origin: left center;
+transition: transform 1s ease;
+position: absolute;
+backface-visibility: hidden;
+}
+.page:nth-child(1) {
+z-index: 3;
+}
+.page:nth-child(2) {
+z-index: 2;
+}
+.page:nth-child(3) {
+z-index: 1;
+}
+.book:hover .page:nth-child(1) {
+transform: rotateY(-180deg);
+}
+</style>
+</head>
+<body>
+<div class="book">
+<div class="page">
+<!-- Page 1 - écris ton texte ici -->
+</div>
+<div class="page">
+<!-- Page 2 -->
+</div>
+<div class="page">
+<!-- Page 3 -->
+</div>
+</div>
+</body>
+</html>
